@@ -4,14 +4,13 @@ David Williamson @ Varilink Computing Ltd
 
 ------
 
-A Docker image that implements the npm package manager. Useful for deploying packages using npm into projects. To build the image:
+A Docker image that implements the npm package manager. Useful for deploying packages using npm into projects. To use this tool, install it into a project as
+as submodule and add its docker-compose.yml file to the COMPOSE_FILE environment
+variable. You can then do things like this:
 
 ```bash
-docker build --tag varilink/npm .
+docker-compose run --rm npm install bootstrap@4.5.3
 ```
 
-The resulting image has the npm command as its entrypoint so it can then be used to do things like this example:
-
-```bash
-docker run --rm --volume "$PWD/node_modules:/node_modules" varilink/npm install bootstrap@4.5.3
-```
+Packages will be installed in the node_modules folder within the project. Create
+this folder first before running this tool.

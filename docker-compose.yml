@@ -1,0 +1,9 @@
+version: "3.6"
+
+services:
+
+  npm:
+
+    build: tools-npm
+    image: varilink/npm
+    volumes: [ ./node_modules:/node_modules ]
