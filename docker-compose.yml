@@ -6,4 +6,5 @@ services:
 
     build: tools-npm
     image: varilink/npm
-    volumes: [ ./node_modules:/node_modules ]
+    volumes:
+      - ${NPM_PROJECT}:/project

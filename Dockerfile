@@ -6,9 +6,9 @@ RUN                                                                            \
   apt-get install --no-install-recommends --yes                                \
     curl                                                                       \
     software-properties-common                                              && \
-  curl -sL https://deb.nodesource.com/setup_12.x | bash -                   && \
+  curl -sL https://deb.nodesource.com/setup_14.x | bash -                   && \
   apt-get install --no-install-recommends --yes nodejs
 
-WORKDIR /
+WORKDIR /project
 
 ENTRYPOINT [ "/usr/bin/npm" ]
