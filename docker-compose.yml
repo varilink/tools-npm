@@ -5,6 +5,3 @@ services:
   npm:
 
     build: tools/npm
-    image: varilink/npm
-    volumes:
-      - ${NPM_PROJECT}:/project
