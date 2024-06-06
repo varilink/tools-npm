@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:bookworm
 LABEL maintainer="david.williamson@varilink.co.uk"
 ARG UID=1000
 
