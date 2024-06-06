@@ -18,7 +18,7 @@ RUN                                                                            \
   apt-get update                                                            && \
   apt-get install --no-install-recommends --yes                                \
     nodejs                                                                  && \
-  useradd --create-home --base-dir / --uid ${UID} npm
+  useradd --create-home --uid ${UID} npm
 
 USER ${UID}
 WORKDIR /npm
