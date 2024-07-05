@@ -3,9 +3,11 @@ services:
   npm:
 
     build: tools/npm
+    image: varilink/tools/npm
     entrypoint: /usr/bin/npm
 
   npx:
 
     build: tools/npm
+    image: varilink/tools/npm
     entrypoint: /usr/bin/npx
