@@ -2,12 +2,12 @@ services:
 
   npm:
 
-    build: tools/npm
-    image: varilink/tools/npm
-    entrypoint: /usr/bin/npm
+    build: tools/node
+    image: varilink/tools/node
+    entrypoint: [ "npm" ]
 
   npx:
 
-    build: tools/npm
-    image: varilink/tools/npm
-    entrypoint: /usr/bin/npx
+    build: tools/node
+    image: varilink/tools/node
+    entrypoint: [ "npx" ]
